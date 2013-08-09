@@ -42,6 +42,7 @@ if(isset($_REQUEST["Body"]) || isset($_GET["testdata"])){
 	$query_smsLog = "INSERT INTO `sms_log` (`id`, `from`, `body`, `fromCountry`, `fromCity`, `fromState`, `fromZip`, `smsMessageSid`, `timestamp`, `mId`) VALUES (NULL, '".$from."', '".$requestCode."', '".$requestCountry."', '".$requestCity."', '".$requestState."', '".$requestZip."', '".$requestSid."', CURRENT_TIMESTAMP, '1');";
 	$smsLog = new Sql;
 	$smsLog_results = $smsLog->query($query_smsLog);
+	$smsLog->__destruct();
 	
 	header("content-type: text/xml");
 	echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
@@ -75,6 +76,13 @@ if(isset($_REQUEST["Body"]) || isset($_GET["testdata"])){
 	if(isset($_GET["comments"])){
 		$reviewComments = $_GET["comments"];
 	}
+	
+	$query_mobileLog = "INSERT INTO  `mobileapp_log` (`id` ,`code` ,`app` ,`number` ,`timestamp` ,`mId`)
+						VALUES (NULL , '".$mCode.",".$reviewStatus."', 'Android', '00000000', CURRENT_TIMESTAMP , '1');";
+	$mobileLog = new Sql;
+	$mobileLog_results = $mobileLog->query($query_mobileLog);
+	$mobileLog->__destruct();
+							
 	header('Content-Type:application/json');		
 	echo '{"status":"success","message":"Thank you for your review!"}';
 }

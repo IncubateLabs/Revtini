@@ -29,8 +29,8 @@ class Sql {
     function __construct() {
         $this->hostname_revtini_db = "localhost";
         $this->database_revtini_db = "revtini_dev";
-        $this->username_revtini_db = "root";
-        $this->password_revtini_db = "";
+        $this->username_revtini_db = "revtini_dev";
+        $this->password_revtini_db = "revtini_dev";
     }
 
     function __destruct() {
