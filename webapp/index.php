@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Review  Site</title>
+    <title>Revtini</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -20,7 +19,7 @@
     <div class="container">
 
       <div class="masthead">
-        <h3 class="text-muted">Project name</h3>
+        <h3 class="text-muted">Revtini</h3>
         <div class="navbar">
           <!-- <a class="navbar-brand" href="#"></a> -->
           <ul class="nav navbar-nav">
