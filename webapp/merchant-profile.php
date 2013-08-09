@@ -23,8 +23,8 @@
         <div class="navbar">
           <!-- <a class="navbar-brand" href="#"></a> -->
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Profile</a></li>
+            <li><a href="#">Home</a></li>
+            <li class="active"><a href="#">Profile</a></li>
             <li><a href="#">Administrator</a></li>
           </ul>
         </div>
@@ -32,88 +32,84 @@
 
       <!-- Jumbotron -->
       <div class="jumbotron">
-        <h1>Merchant</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p>
+        <h1>Merchant Details</h1>
+        <!-- <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p> -->
         <!-- <p><a class="btn btn-large btn-success" href="#">Get started today</a></p> -->
       </div>
 
 
       <div class="body-content">
-  <!--     <div class="row">
-  <div class="col-lg-4">Merchant</div>
-  <div class="col-lg-4">Good</div>
-  <div class="col-lg-4">Bad</div>
+     
+
+<div class="row">
+  <div class="col-lg-9">
+    ABC  Company
+    <div class="row">
+      <div class="col-lg-6">
+        <address>xxxxxxx.Co(pvt).Ltd</br>
+        xxxxxx2013</br>
+        xxxxxxx</address>
+      </div>
+      <div class="col-lg-6">
+        <img src="..." class="img-thumbnail">
+      </div>
+    </div>
+  </div>
 </div>
 
-    <div class="row">
-  <div class="col-lg-4"></div>
-  <div class="col-lg-4">verified</div>
-  <div class="col-lg-4">unverified</div>
+
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#">Verified</a></li>
+  <li><a href="#">Unverified</a></li>
+  
+</ul>
+
+
+<div class="body-content">
+<div class="row">
+  <div class="col-6 col-lg-4">Name1</div>
+  <div class="col-6 col-lg-4">like/unlike</div>
+  <div class="col-6 col-lg-4">comment.........</div>
 </div>
 
-    <div class="row">
-  <div class="col-lg-4"></div>
-  <div class="col-lg-4">verified</div>
-  <div class="col-lg-4">unverified</div>
-</div> -->
-<legend>Merchant</legend>
-<table class="table">
-  <tr class="success">
-    <th>Company Name</th></a>
-    <th>Like</th>
-    <th>Unlike</th>
-  </tr>
-  <tr>
-  <td><a href="#" class="active">ABC Company</a></td>
-  <td>100</td>
-  <td>20</td>
-  
-  </tr>
-  <tr>
-  <td><a href="#" class="active">ABC Company</a></td>
-  <td>100</td>
-  <td>20</td>
-  
-  </tr>
-  <tr>
- <td> <a href="#" class="active">ABC Company</a></td>
-  <td>100</td>
-  <td>20</td>
-  
-  </tr>
-  <tr>
-  <td><a href="#" class="active">ABC Company</a></td>
-  <td>100</td>
-  <td>20</td>
-  
-  </tr>
-  <tr>
-  <td><a href="#" class="active">ABC Company</a></td>
-  <td>100</td>
-  <td>20</td>
-  
-  </tr>
-</table>
+<div class="row">
+  <div class="col-6 col-lg-4">Name2</div>
+  <div class="col-6 col-lg-4">like/unlike</div>
+  <div class="col-6 col-lg-4">comment.........</div>
+</div>
+<div class="row">
+  <div class="col-6 col-lg-4">Name2</div>
+  <div class="col-6 col-lg-4">like/unlike</div>
+  <div class="col-6 col-lg-4">comment.........</div>
+</div>
+<div class="row">
+  <div class="col-6 col-lg-4">Name2</div>
+  <div class="col-6 col-lg-4">like/unlike</div>
+  <div class="col-6 col-lg-4">comment.........</div>
+</div>
+<div class="row">
+  <div class="col-6 col-lg-4">Name2</div>
+  <div class="col-6 col-lg-4">like/unlike</div>
+  <div class="col-6 col-lg-4">comment.........</div>
+</div>
+<div class="row">
+  <div class="col-6 col-lg-4">Name2</div>
+  <div class="col-6 col-lg-4">like/unlike</div>
+  <div class="col-6 col-lg-4">comment.........</div>
+</div>
+<div class="row">
+  <div class="col-6 col-lg-4">Name2</div>
+  <div class="col-6 col-lg-4">like/unlike</div>
+  <div class="col-6 col-lg-4">comment.........</div>
+</div>
 
 
-        <!-- Example row of columns -->
-       <!--  <div class="row">
-          <div class="col-lg-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-          </div>
-          <div class="col-lg-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-         </div>
-          <div class="col-lg-4">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-            <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-          </div>
-        </div> -->
+
+
+</div>
+
+
+  
 
       </div><!-- /.body-content -->
 
