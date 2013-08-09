@@ -1,0 +1,162 @@
+-- MySQL dump 10.10
+--
+-- Host: localhost    Database: revtini_dev
+-- ------------------------------------------------------
+-- Server version	5.0.24-community-nt
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `merchant_jobs`
+--
+
+DROP TABLE IF EXISTS `merchant_jobs`;
+CREATE TABLE `merchant_jobs` (
+  `jobId` int(11) NOT NULL auto_increment,
+  `mId` int(11) default NULL,
+  `phone_number` varchar(15) default NULL,
+  `job_date` datetime default NULL,
+  `is_review_done` bit(1) default NULL,
+  PRIMARY KEY  (`jobId`),
+  KEY `mId_idx` (`mId`),
+  CONSTRAINT `mId_jobs` FOREIGN KEY (`mId`) REFERENCES `merchants` (`mId`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `merchant_jobs`
+--
+
+
+/*!40000 ALTER TABLE `merchant_jobs` DISABLE KEYS */;
+LOCK TABLES `merchant_jobs` WRITE;
+UNLOCK TABLES;
+/*!40000 ALTER TABLE `merchant_jobs` ENABLE KEYS */;
+
+--
+-- Table structure for table `merchants`
+--
+
+DROP TABLE IF EXISTS `merchants`;
+CREATE TABLE `merchants` (
+  `mId` int(11) NOT NULL,
+  `code` varchar(10) default NULL,
+  `company_name` varchar(45) default NULL,
+  `phone` varchar(15) default NULL,
+  `email` varchar(45) default NULL,
+  `date_created` datetime default NULL,
+  PRIMARY KEY  (`mId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `merchants`
+--
+
+
+/*!40000 ALTER TABLE `merchants` DISABLE KEYS */;
+LOCK TABLES `merchants` WRITE;
+UNLOCK TABLES;
+/*!40000 ALTER TABLE `merchants` ENABLE KEYS */;
+
+--
+-- Table structure for table `review_dtls`
+--
+
+DROP TABLE IF EXISTS `review_dtls`;
+CREATE TABLE `review_dtls` (
+  `reviewdtl_id` int(11) NOT NULL,
+  `reviewId` int(11) default NULL,
+  `comment` varchar(500) default NULL,
+  `price_status` bit(1) default NULL,
+  `professionalism_status` bit(1) default NULL,
+  `punctuality_status` bit(1) default NULL,
+  PRIMARY KEY  (`reviewdtl_id`),
+  KEY `reviewId_idx` (`reviewId`),
+  CONSTRAINT `reviewId` FOREIGN KEY (`reviewId`) REFERENCES `reviews` (`reviewId`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `review_dtls`
+--
+
+
+/*!40000 ALTER TABLE `review_dtls` DISABLE KEYS */;
+LOCK TABLES `review_dtls` WRITE;
+UNLOCK TABLES;
+/*!40000 ALTER TABLE `review_dtls` ENABLE KEYS */;
+
+--
+-- Table structure for table `reviews`
+--
+
+DROP TABLE IF EXISTS `reviews`;
+CREATE TABLE `reviews` (
+  `reviewId` int(11) NOT NULL,
+  `mId` int(11) default NULL,
+  `status` bit(1) default NULL,
+  `reviewDateTime` datetime default NULL,
+  `isVerified` bit(1) default NULL,
+  `from_device` varchar(5) default NULL,
+  `phone_number` varchar(15) default NULL,
+  PRIMARY KEY  (`reviewId`),
+  KEY `mId_idx` (`mId`),
+  CONSTRAINT `mId` FOREIGN KEY (`mId`) REFERENCES `merchants` (`mId`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `reviews`
+--
+
+
+/*!40000 ALTER TABLE `reviews` DISABLE KEYS */;
+LOCK TABLES `reviews` WRITE;
+UNLOCK TABLES;
+/*!40000 ALTER TABLE `reviews` ENABLE KEYS */;
+
+--
+-- Table structure for table `sms_log`
+--
+
+DROP TABLE IF EXISTS `sms_log`;
+CREATE TABLE `sms_log` (
+  `id` int(11) NOT NULL auto_increment,
+  `from` text NOT NULL,
+  `body` text NOT NULL,
+  `fromCountry` text,
+  `fromCity` text,
+  `fromState` text,
+  `fromZip` text,
+  `smsMessageSid` text,
+  `timestamp` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  `mId` text NOT NULL,
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sms_log`
+--
+
+
+/*!40000 ALTER TABLE `sms_log` DISABLE KEYS */;
+LOCK TABLES `sms_log` WRITE;
+UNLOCK TABLES;
+/*!40000 ALTER TABLE `sms_log` ENABLE KEYS */;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
