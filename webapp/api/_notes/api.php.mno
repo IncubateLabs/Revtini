@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rs_sms_log" value="name:id;datatype:int,name:from;datatype:blob,name:body;datatype:blob,name:fromCountry;datatype:blob,name:fromCity;datatype:blob,name:fromState;datatype:blob,name:fromZip;datatype:blob,name:smsMessageSid;datatype:blob,name:timestamp;datatype:timestamp,name:mId;datatype:int" />
+</info>
