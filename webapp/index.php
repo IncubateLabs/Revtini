@@ -23,9 +23,9 @@
         <div class="navbar">
           <!-- <a class="navbar-brand" href="#"></a> -->
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Administrator</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li class="active"><a href="merchant-profile.php">Profile</a></li>
+            <li><a href="admin/index.php">Administrator</a></li>
           </ul>
         </div>
       </div>
