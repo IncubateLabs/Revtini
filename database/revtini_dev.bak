@@ -67,6 +67,33 @@ UNLOCK TABLES;
 /*!40000 ALTER TABLE `merchants` ENABLE KEYS */;
 
 --
+-- Table structure for table `mobileapp_log`
+--
+
+DROP TABLE IF EXISTS `mobileapp_log`;
+CREATE TABLE `mobileapp_log` (
+  `id` int(11) NOT NULL auto_increment,
+  `code` text NOT NULL,
+  `app` text NOT NULL,
+  `number` text,
+  `timestamp` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  `mId` int(11) NOT NULL,
+  PRIMARY KEY  (`id`),
+  KEY `mId_idx` (`mId`),
+  CONSTRAINT `mId_fk_mobileapp_log_merchant` FOREIGN KEY (`mId`) REFERENCES `merchants` (`mId`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `mobileapp_log`
+--
+
+
+/*!40000 ALTER TABLE `mobileapp_log` DISABLE KEYS */;
+LOCK TABLES `mobileapp_log` WRITE;
+UNLOCK TABLES;
+/*!40000 ALTER TABLE `mobileapp_log` ENABLE KEYS */;
+
+--
 -- Table structure for table `review_dtls`
 --
 
@@ -136,9 +163,11 @@ CREATE TABLE `sms_log` (
   `fromZip` text,
   `smsMessageSid` text,
   `timestamp` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
-  `mId` text NOT NULL,
+  `mId` int(11) NOT NULL,
   PRIMARY KEY  (`id`),
-  UNIQUE KEY `id` (`id`)
+  UNIQUE KEY `id` (`id`),
+  KEY `mId_idx` (`mId`),
+  CONSTRAINT `mId_fk_sms_log_merchant` FOREIGN KEY (`mId`) REFERENCES `merchants` (`mId`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
