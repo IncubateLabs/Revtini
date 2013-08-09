@@ -67,7 +67,7 @@ VALUES
 0,
 '2013/08/21',
 0,
-'ANDROID',
+'ANDR',
 '0112 987432'
 );
 INSERT INTO `revtini_dev`.`reviews`
@@ -139,6 +139,9 @@ VALUES
 0,
 '2013/08/21',
 0,
-'ANDROID',
+'AND',
 '0112 987432'
 );
+
+
+select * from reviews
