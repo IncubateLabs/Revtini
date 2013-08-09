@@ -70,3 +70,13 @@ CREATE TABLE IF NOT EXISTS `revtini_dev`.`sms_log` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
 );
+
+CREATE TABLE IF NOT EXISTS `mobileapp_log` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `code` text NOT NULL,
+  `app` text NOT NULL,
+  `number` text,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `mId` text NOT NULL,
+  PRIMARY KEY (`id`)
+);
