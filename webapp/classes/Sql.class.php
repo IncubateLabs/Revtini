@@ -34,11 +34,11 @@ class Sql {
     }
 
     function __destruct() {
-        unset($this->host);
+        unset($this->hostname_revtini_db);
     }
 
     private function connect() {
-        $this->conn = @mysql_connect($this->host, $this->dbuser, $this->dbpwd)
+        $this->conn = @mysql_connect($this->hostname_revtini_db, $this->username_revtini_db, $this->password_revtini_db)
                 or die(mysql_error());
     }
 
@@ -47,7 +47,7 @@ class Sql {
     }
 
     private function selectDb() {
-        mysql_select_db($this->db, $this->conn) or die(mysql_error());
+        mysql_select_db($this->database_revtini_db, $this->conn) or die(mysql_error());
     }
 
     /**
@@ -72,7 +72,7 @@ class Sql {
         // its the time to break the connection
         $this->disconnect();
 
-
+		$dataSet="";
         while ($row =@mysql_fetch_array($result)) {
             $dataSet[] = $row;
         }
