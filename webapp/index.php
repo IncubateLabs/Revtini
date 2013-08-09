@@ -19,7 +19,7 @@
     <div class="container">
 
       <div class="masthead">
-        <img src="images/logo.jpg" height="100px" width="100px">
+        <img src="images/logo.jpg" height="100px" width="225px">
         <div class="navbar">
           <!-- <a class="navbar-brand" href="#"></a> -->
           <ul class="nav navbar-nav">
