@@ -1,4 +1,4 @@
-CREATE  TABLE `bizreview_dev`.`merchants` (
+CREATE  TABLE `revtini_dev`.`merchants` (
   `mId` INT NOT NULL ,
   `code` VARCHAR(10) NULL ,
   `company_name` VARCHAR(45) NULL ,
@@ -9,7 +9,7 @@ CREATE  TABLE `bizreview_dev`.`merchants` (
   
   
   
-  CREATE  TABLE `bizreview_dev`.`reviews` (
+  CREATE  TABLE `revtini_dev`.`reviews` (
   `reviewId` INT NOT NULL ,
   `mId` INT NULL ,
   `status` BIT NULL ,
@@ -21,12 +21,12 @@ CREATE  TABLE `bizreview_dev`.`merchants` (
   INDEX `mId_idx` (`mId` ASC) ,
   CONSTRAINT `mId`
     FOREIGN KEY (`mId` )
-    REFERENCES `bizreview_dev`.`merchants` (`mId` )
+    REFERENCES `revtini_dev`.`merchants` (`mId` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 	
 	
-	CREATE  TABLE `bizreview_dev`.`review_dtls` (
+	CREATE  TABLE `revtini_dev`.`review_dtls` (
   `reviewdtl_id` INT NOT NULL ,
   `reviewId` INT NULL ,
   `comment` VARCHAR(500) NULL ,
@@ -37,12 +37,12 @@ CREATE  TABLE `bizreview_dev`.`merchants` (
   INDEX `reviewId_idx` (`reviewId` ASC) ,
   CONSTRAINT `reviewId`
     FOREIGN KEY (`reviewId` )
-    REFERENCES `bizreview_dev`.`reviews` (`reviewId` )
+    REFERENCES `revtini_dev`.`reviews` (`reviewId` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
 	
-	CREATE  TABLE `bizreview_dev`.`merchant_jobs` (
+	CREATE  TABLE `revtini_dev`.`merchant_jobs` (
   `jobId` INT NOT NULL AUTO_INCREMENT ,
   `mId` INT NULL ,
   `phone_number` VARCHAR(15) NULL ,
@@ -52,6 +52,6 @@ CREATE  TABLE `bizreview_dev`.`merchants` (
   INDEX `mId_idx` (`mId` ASC) ,
   CONSTRAINT `mId_jobs`
     FOREIGN KEY (`mId` )
-    REFERENCES `bizreview_dev`.`merchants` (`mId` )
+    REFERENCES `revtini_dev`.`merchants` (`mId` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
