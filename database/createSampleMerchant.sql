@@ -1,0 +1,1 @@
+INSERT INTO `revtini_dev`.`merchants` (`mId`, `code`, `company_name`, `phone`, `email`, `date_created`) VALUES ('1', 'ABCD', 'XYZ', '001650494717', 'info@textper.com', '2013-08-09 00:00:00');
