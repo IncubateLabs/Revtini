@@ -1,0 +1,1 @@
+INSERT INTO `revtini_dev`.`sms_log` (`id`, `from`, `body`, `fromCountry`, `fromCity`, `fromState`, `fromZip`, `smsMessageSid`, `timestamp`, `mId`) VALUES (NULL, '0094772271270', 'ABCD', 'LK', 'Colombo', 'WP', '10250', '98375934759437', CURRENT_TIMESTAMP, '1');
