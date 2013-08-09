@@ -1,4 +1,4 @@
-CREATE  TABLE `revtini_dev`.`merchants` (
+CREATE  TABLE IF NOT EXISTS `revtini_dev`.`merchants` (
   `mId` INT NOT NULL ,
   `code` VARCHAR(10) NULL ,
   `company_name` VARCHAR(45) NULL ,
@@ -9,7 +9,7 @@ CREATE  TABLE `revtini_dev`.`merchants` (
   
   
   
-  CREATE  TABLE `revtini_dev`.`reviews` (
+  CREATE  TABLE IF NOT EXISTS `revtini_dev`.`reviews` (
   `reviewId` INT NOT NULL ,
   `mId` INT NULL ,
   `status` BIT NULL ,
@@ -26,7 +26,7 @@ CREATE  TABLE `revtini_dev`.`merchants` (
     ON UPDATE NO ACTION);
 	
 	
-	CREATE  TABLE `revtini_dev`.`review_dtls` (
+	CREATE  TABLE IF NOT EXISTS `revtini_dev`.`review_dtls` (
   `reviewdtl_id` INT NOT NULL ,
   `reviewId` INT NULL ,
   `comment` VARCHAR(500) NULL ,
@@ -42,7 +42,7 @@ CREATE  TABLE `revtini_dev`.`merchants` (
     ON UPDATE NO ACTION);
 
 	
-	CREATE  TABLE `revtini_dev`.`merchant_jobs` (
+	CREATE  TABLE IF NOT EXISTS `revtini_dev`.`merchant_jobs` (
   `jobId` INT NOT NULL AUTO_INCREMENT ,
   `mId` INT NULL ,
   `phone_number` VARCHAR(15) NULL ,
